@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按班级分类</title>
+</head>
+<body>
+     {% block content%}
+    <p><h1>班级名:{{ i.classroom }}</h1></p>
+    <table>
+        <tr>
+            <td><h5>姓名</h5></td>
+            <td><h5>性别</h5></td>
+        </tr>
+    {% for j in i %}
+    <tr>
+        <td><h5>j.name</h5></td>
+        <td><h5>j.sex</h5></td>
+    </tr>
+    {% endfor%}
+    </table>
+    {% endblock content%}
+</body>
+</html>

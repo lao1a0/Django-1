@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印数据库的内容</title>
+</head>
+<body>
+    {% block content%}
+    <p><h1>数据表名:laolao</h1></p>
+    <table>
+        {% for i in data %}
+        <tr>
+            <td bgcolor="yellow"><a href="{% url 'one:studentname' i %}" >Class:{{ i }}</a></td>
+        </tr>
+        {% endfor%}
+    </table>
+    {% endblock content%}
+</body>
+</html>

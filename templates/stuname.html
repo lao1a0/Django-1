@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class:{{std.0.classroom}}</title>
+</head>
+<body>
+    <h1>班级：{{std.0.classroom}}</h1>
+
+     {% for i in std %}
+    <ul>
+        <li>{{i.name}}</li>
+    </ul>
+     {% endfor%}
+
+
+    <hr>
+
+    <h4>输入姓名可删除学生</h4>
+    <form action="{% url 'one:detail' %}" method="post">
+        <span>学生名字：</span><input type="text" name="name" placeholder="请输入学生名字">
+        <button>Submit</button>
+    </form>
+
+
+
+    <hr>
+
+        <h4>输入姓名可添加学生</h4>
+        <form action="{% url 'one:CreateStudent' %}" method="post">
+            <span>学生名字：</span><input type="text" name="name" placeholder="请输入学生名字">
+            <input type="hidden"  name="class" value="{{std.0.classroom}}">
+            <button>Submit</button>
+        </form>
+</body>
+</html>
+
