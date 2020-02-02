@@ -1,5 +1,14 @@
 # Django-1
 实现基于sqlit数据库的增删
+Package    Version
+---------- -------
+asgiref    3.2.3  
+Django     1.11.7 
+pip        19.0.3 
+PyMySQL    0.9.3  
+pytz       2019.3 
+setuptools 40.8.0 
+sqlparse   0.3.0  
 #### 班级和学生级联显示
 
 1. 班级列表，班级列表可点击： <img src="https://github.com/thinkforanameissohard/Django-1/blob/master/image/image-20200202193352583.png" />
